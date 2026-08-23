@@ -1,4 +1,4 @@
-# Cisco ISE Network Access Control & RADIUS Authentication Lab (Azure)
+# Cisco ISE Network Access Control & RADIUS Authentication Lab (Azure, CURRENTLY IN PROGRESS)
 
 A Cisco Identity Services Engine (ISE) 3.5 deployment built on Microsoft Azure, paired with a Ubuntu RADIUS client, to demonstrate network access control, RADIUS authentication, and identity-based authorization — the kind of work a NOC or network security engineer handles day to day. The project is broken into phases, documented as a build → configure → verify walkthrough for each.
 
