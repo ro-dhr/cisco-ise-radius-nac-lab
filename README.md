@@ -36,6 +36,7 @@ Created the resource group, then a VNet on `10.0.1.0/24` with a single subnet, a
 ![Resource group created](screenshots/01-resource-group-created.png)
 
 *VNet provisioned on `10.0.1.0/24` with a single subnet for the lab.*
+
 ![VNet created](screenshots/02-vnet-created.png)
 
 *Network Security Group created to scope traffic into the lab.*
