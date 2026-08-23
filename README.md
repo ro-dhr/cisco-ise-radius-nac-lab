@@ -158,8 +158,21 @@ Ran `radtest` from the client and got back an `Access-Accept`, including a Cisco
 *Guest-scoped authentication test, correctly rejected outside its intended access.*
 ![Guest user authentication test](screenshots/22-guest-user-test.png)
 
-**Outcome:** RADIUS authentication and identity-based authorization both work end to end, including TrustSec SGT data in the response.
-
+### Verify at the packet level
+ 
+Captured RADIUS traffic between the client and ISE with `tshark` to confirm the `radtest` results weren't just client-side output — the actual wire traffic shows the Access-Accept and Access-Reject exchanges. Cross-checked against the ISE policy board, where the Employee Access rule shows a live hit count, confirming the rule that actually matched the request.
+ 
+*`tshark` capture on `radius-client01` showing the Access-Request / Access-Accept exchange on the wire.*
+![RADIUS packet capture - Access-Accept](screenshots/23-radius-packet-capture-accept.png)
+ 
+*`tshark` capture showing an Access-Request / Access-Reject exchange, confirming the rejection at the packet level, not just in client output.*
+![RADIUS packet capture - Access-Reject](screenshots/24-radius-packet-capture-reject.png)
+ 
+*ISE policy board showing the Employee Access rule registering a hit, confirming which rule actually matched the request.*
+![Employee Access policy hit count](screenshots/25-employee-policy-hit-count.png)
+ 
+**Outcome:** RADIUS authentication and identity-based authorization both work end to end, including TrustSec SGT data in the response, confirmed independently at both the packet level and the policy engine level.
+ 
 ---
 
 ## Troubleshooting Highlights
