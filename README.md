@@ -69,7 +69,7 @@ Deployed `isenode1` into the lab VNet and confirmed it was up and reachable, the
 *`isenode1` deployed and running in the lab VNet.*
 ![ISE VM running](screenshots/06-ise-vm-running.png)
 
-*Route table reviewed and connectivity to the ISE node confirmed.*
+*Route table reviewed and connectivity to the ISE node confirmed. Note: The ping to the default gateway not working is normal because Azure network infrastructure drops ICMP traffic by design.*
 ![ISE route table and connectivity tests](screenshots/07-ise-connectivity-test.png)
 
 ### Verify
