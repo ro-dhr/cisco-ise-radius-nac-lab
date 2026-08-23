@@ -40,9 +40,11 @@ Created the resource group, then a VNet on `10.0.1.0/24` with a single subnet, a
 ![VNet created](screenshots/02-vnet-created.png)
 
 *Network Security Group created to scope traffic into the lab.*
+
 ![NSG created](screenshots/03-nsg-created.png)
 
 *Inbound rules restricted to the ports the lab actually needs.*
+
 ![NSG inbound rules configured](screenshots/04-nsg-rules-configured.png)
 
 ### Verify
