@@ -184,7 +184,7 @@ Captured RADIUS traffic between the client and ISE with `tshark` to confirm the 
 - **Not every VM size is available in every region.** B-series wasn't available for the RADIUS client VM in this region, so I compared the available D-series options on CPU, RAM, disk, and cost instead. A separate SSH connection failure turned out to be an incorrectly entered PowerShell environment variable for the private key path, not an actual access problem — correcting the path fixed it.
 - **A monitoring problem and an authentication problem are not the same problem.** RADIUS authentication succeeded end to end (`radtest` returned `Access-Accept`), but ISE's Live Logs dashboard showed no entries. Rather than assuming RADIUS itself was broken, I checked the response in detail — `Access-Accept`, correct `User-Name`, and a valid TrustSec SGT in `Cisco-AVPair` — which confirmed authentication was genuinely working. That let me isolate Live Logs as a separate Monitoring/UI issue (compounded by known issues in early ISE 3.5.0.527 builds) instead of tearing down a working RADIUS configuration to chase it. Confirmed the Monitoring persona was enabled and AAA Audit logging was set to use the LogCollector; root cause not yet found and tracked as an open item.
 
-## Roadmap — Next Phase
+## Roadmap — Future Additions
 
 - [ ] Deploy a Windows Server VM as an Active Directory Domain Controller + DNS server
 - [ ] Create organizational users and security groups in AD
