@@ -8,7 +8,7 @@ A Cisco Identity Services Engine (ISE) 3.5 deployment built on Microsoft Azure, 
 |---|---|
 | **Cloud platform** | Microsoft Azure |
 | **Network** | VNet `10.0.1.0/24`, single subnet, NSG restricting inbound to required ports |
-| **ISE node** | `isenode1` — Cisco ISE 3.5, `10.0.1.4` — Administration, Policy Service, and Monitoring personas |
+| **ISE node** | `isenode1` — Cisco ISE 3.5, `10.0.1.4` |
 | **RADIUS client** | `radius-client01` — Ubuntu Linux, `10.0.1.5` |
 
 ## Phases
