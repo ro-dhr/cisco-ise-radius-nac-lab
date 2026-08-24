@@ -123,7 +123,7 @@ Deployed `radius-client01`, confirmed SSH access, and verified connectivity to I
 ![RADIUS client VM deployed](screenshots/14-radius-client-vm-deployed.png)
 
 *SSH access confirmed to the RADIUS client VM.*
-![SSH into RADIUS client](screenshots/15-ssh-radius-client.png)
+![SSH into RADIUS client](screenshots/15-ssh-connect-radius-client.png)
 
 *`netcat` used to sanity-check connectivity toward the ISE node.*
 ![Netcat connectivity test](screenshots/16-netcat-connectivity-test.png)
